@@ -4,11 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel and Geography</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            background: url('homebg.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
 
+        header {
+            background-color: rgba(31, 31, 31, 0.8);
+            color: #e0e0e0;
+            padding: 1em 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: #bb86fc;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 2em;
+        }
+
+        .section-wrapper {
+            background: rgba(31, 31, 31, 0.8);
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            margin-bottom: 2em;
+        }
+
+        .section-wrapper h2 {
+            border-bottom: 2px solid #bb86fc;
+            padding-bottom: 0.5em;
+        }
+
+        .destination, .story {
+            border: 1px solid #333;
+            padding: 1em;
+            margin-bottom: 1em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: rgba(31, 31, 31, 0.8);
+            text-align: center;
+            padding: 1em 0;
+            color: #e0e0e0;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .search {
+            text-align: center;
+            margin-top: 2em;
+        }
+
+        #search-bar {
+            padding: 0.5em;
+            width: 50%;
+            margin-right: 0.5em;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        button {
+            padding: 0.5em;
+            background-color: #bb86fc;
+            color: #121212;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #a370f7;
+        }
+    </style>
 </head>
-<body style="background: url('homebg.jpg') no-repeat center center fixed;;">
+<body>
     <header>
         <h1>Travel and Geography</h1>
         <nav>
@@ -23,7 +119,7 @@
     </header>
 
     <main>
-        <section class="featured-destinations">
+        <section class="section-wrapper featured-destinations">
             <h2>Featured Destinations</h2>
             <div class="destination" id="destination1">
                 <h3>Paris, France</h3>
@@ -39,7 +135,7 @@
             </div>
         </section>
 
-        <section class="latest-stories">
+        <section class="section-wrapper latest-stories">
             <h2>Latest Travel Stories</h2>
             <div class="story" id="story1">
                 <h3>A Journey Through the Alps</h3>
@@ -65,5 +161,12 @@
     <footer>
         <p>&copy; 2024 Travel and Geography. All rights reserved.</p>
     </footer>
+    <script>
+        function search() {
+            const query = document.getElementById('search-bar').value;
+            alert('Searching for: ' + query);
+            // Add your search functionality here
+        }
+    </script>
 </body>
 </html>
